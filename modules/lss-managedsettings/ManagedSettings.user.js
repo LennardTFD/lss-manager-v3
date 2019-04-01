@@ -1,4 +1,5 @@
-(function (I18n, $) {
+function ManagedSettings()
+{
     'use strict';
 
     let VERSION = 1.2;
@@ -365,4 +366,22 @@
 
     $('#lssm_menu').append(li);
 
-})(I18n, jQuery);
+}
+
+lssm.Module = {
+    managedSettings: {
+        name: {
+            de: 'Einstellungen',
+            en: 'Settings'
+        },
+        active: true,
+        description: {
+            de: 'Globale Einstellungen',
+            en: 'Global Settings'
+        },
+        entry: ManagedSettings,
+        //noapp: true, // Nicht im App-Store auflisten
+        inframe: true,
+        develop: false
+    },
+};
